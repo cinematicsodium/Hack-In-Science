@@ -12,7 +12,8 @@ Example: 6
 It is believed that no matter which positive integer you start with, the sequence will always reach 1. However, this has not been proven yet and remains an unsolved problem in mathematics.
 '''
 
-def collatz_length(n):
+def collatz_length():
+    n: int = int(input('\nEnter a number to display its Collatz sequence: '))
     collatzSeq = [n]
     lenSequence = 0
     startNum = n
@@ -24,8 +25,8 @@ def collatz_length(n):
         lenSequence += 1
         collatzSeq.append(n)
 
-    print(f'\n Number:\t{startNum} \n Sequence:\t{collatzSeq} \n Count:\t\t{lenSequence} numbers')
+    print(f'\n Number:\t{startNum} \n Sequence:\t{collatzSeq} \n Count:\t\t{lenSequence} numbers\n')
 
 
-collatz_length(100)
+collatz_length()
 

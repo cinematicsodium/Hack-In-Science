@@ -1,3 +1,8 @@
+'''
+- Find the thirteen adjacent digits in the 1000-digit number that have the greatest product
+- Print the value of this product
+'''
+
 import math
 
 numbers = '''

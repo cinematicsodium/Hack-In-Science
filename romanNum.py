@@ -1,11 +1,9 @@
-def from_roman_numeral():
-    """
-    Converts a Roman numeral to an integer.
+'''
+Convert a Roman numeral to an integer.
+'''
 
-    Returns:
-    int: The integer representation of the Roman numeral.
-    """
-    roman = input("Enter a roman numeral: \n")
+def from_roman_numeral():
+    roman = input("\nEnter a roman numeral: ")
 
     val = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
@@ -20,5 +18,6 @@ def from_roman_numeral():
             sum += curr_val
         prev_val = curr_val
 
-    print(sum)
+    print(f'\n{sum}\n')
+
 from_roman_numeral()
