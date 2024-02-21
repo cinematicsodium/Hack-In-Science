@@ -1,3 +1,7 @@
+'''
+Convert a Roman numeral into an integer
+'''
+
 import time
 from time import sleep
 
