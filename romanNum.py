@@ -5,38 +5,41 @@ Convert a Roman numeral into an integer
 
 import time
 from time import sleep
-
-sleep(0.5)
-print(f'\nEnter a Roman numeral to convert to an integer.')
-print(f'\nEnter "q" to exit.\n')
-sleep(0.5)
+sleep(0.2)
+print(f'\nEnter a Roman numeral to convert to an integer...\n')
+sleep(1.2)
+print(f'Enter "q" to exit...\n')
+sleep(1.2)
 print('Example:')
-sleep(0.5)
+sleep(0.2)
 print(f'Roman numeral:\t MCMXCVIII')
-sleep(0.5)
-print(f'Integer:\t\t 1998')
-sleep(0.5)
-print(f'\nCharacters:\t\t I, V, X, L, C, D, M\n')
-sleep(0.5)
+sleep(0.2)
+print(f'Integer:\t 1998\n')
+sleep(1.2)
+print(f'Characters:\t I, V, X, L, C, D, M\n')
+sleep(1.2)
 
 
 def roman_to_int():
-
-  input_numerals: str = str(input(f'Roman numeral:\t ')).upper().strip()
+  print("Enter Roman numeral below:")
+  input_numerals: str = str(input()).upper().strip()
+  print()
   sleep(1)
 
   # Validate Characters
   while True:
     # Exit Check
     if input_numerals.lower() == 'q':
-      print('Goodbye!')
+      print(f'Goodbye!\n')
+      sleep(2)
       exit()
     # Invalid Character Check
     else:
       for i in input_numerals:
         if i.isdigit() or i not in "IVXLCDM":
-          print(f'Invalid character: {i}\n'*3)
-          sleep(1)
+          print(f'Invalid character: {i}'*3)
+          print()
+          sleep(2)
           return ValueError
       break
 
@@ -61,9 +64,9 @@ def roman_to_int():
       sum += numerical_values[x]
       x += 1
 
-  print(f'Integer:\t\t {sum}')
+  print(f'{input_numerals}:\t {sum}')
   print()
-  sleep(1)
+  sleep(2)
 
 
 while True:
