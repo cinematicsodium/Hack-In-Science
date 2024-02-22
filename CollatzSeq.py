@@ -20,12 +20,12 @@ def collatz_length():
         n: str = str(input('\nEnter a number from 1 - 256 to display its Collatz sequence ("q" to quit): '))
         if n.lower() == 'q':
             sleep(1)
-            print(f'\nGoodbye!\n')
+            print(f'\nGoodbye!\n')  # noqa: F541
             sleep(1)
             exit()
         elif not n.isdigit() or int(n) > 256:
             sleep(1)
-            print(f'\nInvalid Entry. Please try again.')
+            print(f'\nInvalid Entry. Please try again.')  # noqa: F541
             continue
         else:
             break
