@@ -3,7 +3,6 @@ Convert a Roman numeral into an integer
 (ex: MMXXIV --> 2024)
 '''
 
-import time
 from time import sleep
 sleep(0.2)
 print(f'\nEnter a Roman numeral to convert to an integer...\n')
