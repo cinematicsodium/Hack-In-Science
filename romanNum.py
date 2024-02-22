@@ -36,7 +36,7 @@ def roman_to_int():
     else:
       for i in input_numerals:
         if i.isdigit() or i not in "IVXLCDM":
-          print(f'Invalid character: {i}'*3)
+          print(f'Invalid character: {i}\n'*3)
           print()
           sleep(2)
           return ValueError
