@@ -1,6 +1,7 @@
 import datetime
+import pandas as pd
 
-forecast: list = [
+raw_data: list = [
     (
         ("temperature", 42),
         ("date", datetime.date(2017, 1, 22)),
@@ -15,16 +16,30 @@ forecast: list = [
     ),
 ]
 
-forecastHeaders: list = []
-forecastLines: list = []
+column_names: list = []
+data: list = []
 
-for categories in forecast:
-    line = []
-    for key, value in categories:
-        if key not in forecastHeaders:
-            forecastHeaders.append(key)
-        if type(value) is tuple:
-            value = '"' + ','.join(str(i) for i in value) + '"'
-            forecast
+for line in raw_data:
 
-        
+    currentLine = []
+
+    for key, value in line:
+        if key not in column_names:
+            column_names.append(key)
+
+        if isinstance(value, tuple):
+            value: str = '"' + ','.join(str(i) for i in value) + '"'
+            currentLine.append(value)
+
+        elif isinstance(value, datetime.date):
+            value = value.strftime("%m/%d/%Y")
+            currentLine.append(value)
+
+        else:
+            currentLine.append(value)
+
+    data.append(currentLine)
+
+df = pd.DataFrame(data, columns = column_names)
+
+df.to_csv('forecast_data.csv', index=False)
