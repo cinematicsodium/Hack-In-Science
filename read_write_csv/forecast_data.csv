@@ -1,0 +1,5 @@
+Temperature,Date,Locations,Weather
+42,01/22/2017,"Berlin,Paris",sunny
+-42,01/22/2017,"Marseille,Moscow",cloudy
+30,01/23/2017,"London,New York",rainy
+20,01/23/2017,"Tokyo,Sydney",windy
