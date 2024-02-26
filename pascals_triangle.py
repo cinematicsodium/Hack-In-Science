@@ -1,4 +1,4 @@
-def print_pascal_triangle(height):
+def pascal_triangle(height):
     previous_row = []
     for row in range(height):
         current_row = []
@@ -18,16 +18,13 @@ def print_pascal_triangle(height):
         formatRow = str(current_row[0]) if row == 0 else ' '.join(str(i) for i in current_row)
         print(formatRow.center(height*4))
 
-
+print("\nPascal's Triangle - A triangular array constructed by summing adjacent elements in preceding rows.")
 
 while True:
-    
     try:
-        a = int(input("\n\nEnter the height of the Pascal's Triangle: "))
-        print_pascal_triangle(a)
-        continue
+        a: int = int(input("\nEnter a number between 2 and 20: "))
+        if not 2 <= a <= 20:
+            raise ValueError
+        pascal_triangle(a)
     except ValueError or TypeError:
-        print("\n\nPlease enter a valid number")
-    else:
-        break
-    
+        print("\nInvalid input. Please enter a number between 2 and 20.")
