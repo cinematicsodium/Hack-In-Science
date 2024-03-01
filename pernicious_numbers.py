@@ -1,7 +1,5 @@
-'''
-Pernicious Numbers
-A pernicious number is a positive integer whose binary digit sum (or Hamming weight) is a prime number.
-'''
+# Pernicious Numbers
+# A pernicious number is a positive integer whose binary digit sum (or Hamming weight) is a prime number.
 
 import math
 

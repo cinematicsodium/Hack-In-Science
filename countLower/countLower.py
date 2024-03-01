@@ -1,6 +1,5 @@
-'''
-Count all lowercase letters in a file and print the frequency of each letter.
-'''
+# Count all lowercase letters in a file 
+# and print the frequency of each letter.
 
 from collections import Counter
 from string import ascii_lowercase as Letters

@@ -1,7 +1,6 @@
-'''
-Use a lambda function to perform the following:
-    - List the numbers that are multiples of 'n' from a list of randomly generated numbers.
-'''
+# Use a lambda function to perform the following:
+#   - List the numbers that are multiples of 'n' from a list of randomly generated numbers.
+
 from secrets import randbelow
 
 def filtered(list_input: list):

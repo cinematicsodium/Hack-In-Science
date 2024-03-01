@@ -1,7 +1,5 @@
-'''
-Convert a Roman numeral into an integer
-(ex: MMXXIV --> 2024)
-'''
+# Convert a Roman numeral into an integer
+# (ex: MMXXIV --> 2024)
 
 from time import sleep
 sleep(0.2)

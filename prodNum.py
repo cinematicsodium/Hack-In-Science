@@ -1,6 +1,4 @@
-'''
-Create a function to find the product of a random list of integers.
-'''
+# Create a function to find the product of a random list of integers.
 
 from random import randint
 

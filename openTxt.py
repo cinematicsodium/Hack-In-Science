@@ -1,6 +1,4 @@
-'''
-Open a file and print the text.
-'''
+# Open a file and print the text.
 
 from pathlib import Path
 
